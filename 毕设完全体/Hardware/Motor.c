@@ -73,14 +73,14 @@ void Car_Back(void)
 
 void Car_Left(void)
 {
-	Motor_SetSpeed1(00);
-	Motor_SetSpeed2(50);
+	Motor_SetSpeed1(50);
+	Motor_SetSpeed2(00);
 }
 
 void Car_Right(void)
 {
-	Motor_SetSpeed1(50);
-	Motor_SetSpeed2(00);
+	Motor_SetSpeed1(00);
+	Motor_SetSpeed2(50);
 }
 
 void Car_Stop(void)

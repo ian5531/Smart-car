@@ -31,3 +31,4 @@
 .\objects\us.o: .\System\delay.h
 .\objects\us.o: Hardware\Motor.h
 .\objects\us.o: Hardware\Servo.h
+.\objects\us.o: Hardware\define_Store.h

@@ -4,6 +4,6 @@
 void US_Init(void);
 float US_GetDistance(void);
 
-void US_Task(float Distance);
+void US_Task(float Distance, uint8_t* pStatusFlag);
 
 #endif

@@ -2,6 +2,7 @@
 #include "delay.h"
 #include "Motor.h"
 #include "Servo.h"
+#include "define_Store.h"
 
 #define	GPIO_US_Tx		GPIO_Pin_11
 #define GPIO_US_Rx		GPIO_Pin_10
@@ -53,7 +54,7 @@ float US_GetDistance(void)
 	return Length;
 }
 
-void US_Task(float Distance)
+void US_Task(float Distance, uint8_t* StatusFlag)
 {
 	if(Distance >= 2 && Distance <= 20)
 	{
@@ -74,6 +75,7 @@ void US_Task(float Distance)
 			{
 				Servo_SetAngle(0);
 				Car_Stop();
+				*StatusFlag = 4;
 			}
 			else
 			{

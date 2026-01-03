@@ -2,9 +2,9 @@
 #include "Motor.h"
 #include "OLED.h"
 
-#define	GPIO_TCRT_1		GPIO_Pin_12
-#define GPIO_TCRT_2		GPIO_Pin_13
-#define	GPIO_TCRT_3		GPIO_Pin_14
+#define	GPIO_TCRT_1		GPIO_Pin_14
+#define GPIO_TCRT_2		GPIO_Pin_12
+#define	GPIO_TCRT_3		GPIO_Pin_13
 #define GPIO_TCRT_4		GPIO_Pin_15
 
 void TCRT_Init(void)
@@ -53,17 +53,17 @@ void TCRT_Task(void)
 
 	if((Flag2==SET)&&(Flag3==SET)&&(Flag1==RESET)&&(Flag4==RESET))
 	{
-		
+		Car_Ahead();
 	}
 	if((Flag1==SET)&&(Flag4==RESET))
 	{
-		Motor_SetSpeed1(-25);
-		Motor_SetSpeed2(50);
+		Motor_SetSpeed1(50);
+		Motor_SetSpeed2(-25);
 	}
 	if((Flag1==RESET)&&(Flag4==SET))
 	{
-		Motor_SetSpeed1(50);
-		Motor_SetSpeed2(-25);
+		Motor_SetSpeed1(-25);
+		Motor_SetSpeed2(50);
 	}
 	if((Flag1&&Flag2&&Flag3&&Flag4)||((Flag1||Flag2||Flag3||Flag4)==RESET))
 	{

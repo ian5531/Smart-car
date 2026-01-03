@@ -9,7 +9,8 @@
 #include "Buzzer.h"
 #include "Servo.h"
 
-uint8_t RxData,StatusFlag;
+uint8_t StatusFlag;
+uint8_t RxData;
 float Distance;
 
 int main()
@@ -62,7 +63,7 @@ int main()
 		if(StatusFlag == 2)	//自动避障状态
 		{
 			OLED_ShowString(2,8,"Avoid   ");
-			US_Task(Distance);
+			US_Task(Distance, &StatusFlag);
 		}
 		
 		if(StatusFlag == 3)	//自动循迹状态

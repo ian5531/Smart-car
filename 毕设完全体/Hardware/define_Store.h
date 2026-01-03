@@ -14,9 +14,9 @@
 /*GPIOB*/
 #define	GPIO_US_Tx					GPIO_Pin_11
 #define GPIO_US_Rx					GPIO_Pin_10
-#define	GPIO_TCRT_1					GPIO_Pin_12
-#define GPIO_TCRT_2					GPIO_Pin_13
-#define	GPIO_TCRT_3					GPIO_Pin_14
+#define	GPIO_TCRT_1					GPIO_Pin_14
+#define GPIO_TCRT_2					GPIO_Pin_12
+#define	GPIO_TCRT_3					GPIO_Pin_13
 #define GPIO_TCRT_4					GPIO_Pin_15
 #define GPIO_Buzzer_Ctrl		GPIO_Pin_0
 
